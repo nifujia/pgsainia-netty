@@ -1,10 +1,10 @@
 package com.pgsainia;
 
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author nifujia
@@ -33,5 +33,4 @@ public class ChannelHandler {
     public Socket socket() {
         return this.socket;
     }
-
 }
