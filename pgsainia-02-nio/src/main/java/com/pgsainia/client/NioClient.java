@@ -23,7 +23,7 @@ public class NioClient {
             if (connect) {
                 socketChannel.register(selector, SelectionKey.OP_READ);
             } else {
-                socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+                socketChannel.register(selector, SelectionKey.OP_CONNECT);
             }
         } catch (IOException e) {
             e.printStackTrace();
