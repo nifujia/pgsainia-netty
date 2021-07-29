@@ -10,6 +10,7 @@
     <modules>
         <module>pgsainia-01-bio</module>
         <module>pgsainia-02-nio</module>
+        <module>pgsainia-03-aio</module>
     </modules>
     <packaging>pom</packaging>
 
