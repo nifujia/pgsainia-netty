@@ -19,7 +19,7 @@ public class BioClient {
         try {
             Socket socket = new Socket("127.0.0.1", PORT);
             log.info("BioClient is started.....");
-            ClientHandler clientHandler = new ClientHandler(socket, Charset.forName("UTF-8"));
+            ClientHandler clientHandler = new ClientHandler(socket, Charset.forName("GBK"));
             clientHandler.start();
         } catch (IOException e) {
             e.printStackTrace();

@@ -21,7 +21,7 @@ public class ServerHandler extends ChannelAdapter {
     @Override
     public void channelActive(ChannelHandler channelHandler) {
         log.info("连接报告：{}", channelHandler.socket().getInetAddress());
-        channelHandler.writeAndFlush("Hello, I am BioServer's message...");
+        channelHandler.writeAndFlush("Hello, I am BioServer's message... \r\n");
     }
 
     @Override

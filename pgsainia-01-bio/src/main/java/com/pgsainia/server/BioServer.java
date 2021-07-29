@@ -28,7 +28,7 @@ public class BioServer extends Thread {
             log.info("server is started.... port：{}", PORT);
             while (true) {
                 Socket socket = serverSocket.accept();
-                ServerHandler serverHandler = new ServerHandler(socket, Charset.forName("UTF-8"));
+                ServerHandler serverHandler = new ServerHandler(socket, Charset.forName("GBK"));
                 serverHandler.start();
             }
         } catch (IOException e) {
