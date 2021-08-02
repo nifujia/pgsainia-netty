@@ -11,6 +11,7 @@
         <module>pgsainia-01-bio</module>
         <module>pgsainia-02-nio</module>
         <module>pgsainia-03-aio</module>
+        <module>pgsainia-04-netty-server</module>
     </modules>
     <packaging>pom</packaging>
 
