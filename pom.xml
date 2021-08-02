@@ -12,6 +12,7 @@
         <module>pgsainia-02-nio</module>
         <module>pgsainia-03-aio</module>
         <module>pgsainia-04-netty-server</module>
+        <module>pgsainia-05-netty-server-read-message</module>
     </modules>
     <packaging>pom</packaging>
 
