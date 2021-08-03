@@ -13,6 +13,7 @@
         <module>pgsainia-03-aio</module>
         <module>pgsainia-04-netty-server</module>
         <module>pgsainia-05-netty-server-read-message</module>
+        <module>pgsainia-06-netty-server-decoder</module>
     </modules>
     <packaging>pom</packaging>
 
