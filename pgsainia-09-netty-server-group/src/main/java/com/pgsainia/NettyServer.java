@@ -11,12 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @author nifujia
  * @description
- * @date 2021/8/3
+ * @date 2021/8/6
  */
 @Slf4j
 public class NettyServer {
+
     public static void main(String[] args) {
         new NettyServer().bind(9999);
+
     }
 
     public void bind(int port) {
@@ -31,7 +33,7 @@ public class NettyServer {
                     .childHandler(new MyChannelInitializer());
 
             ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
-            log.info("nettyServer is started...");
+            log.info("netty server is started...");
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -40,4 +42,5 @@ public class NettyServer {
             parentEventLoopGroup.shutdownGracefully();
         }
     }
+
 }

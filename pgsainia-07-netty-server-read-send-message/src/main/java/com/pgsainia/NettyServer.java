@@ -37,8 +37,8 @@ public class NettyServer {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            parentEventLoopGroup.shutdownGracefully();
             childEventLoopGroup.shutdownGracefully();
+            parentEventLoopGroup.shutdownGracefully();
         }
 
     }
