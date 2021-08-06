@@ -15,6 +15,7 @@
         <module>pgsainia-05-netty-server-read-message</module>
         <module>pgsainia-06-netty-server-decoder</module>
         <module>pgsainia-07-netty-server-read-send-message</module>
+        <module>pgsainia-08-netty-server-decoder-encoder</module>
     </modules>
     <packaging>pom</packaging>
 

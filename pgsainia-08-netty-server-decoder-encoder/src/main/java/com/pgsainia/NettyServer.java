@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @author nifujia
  * @description
- * @date 2021/8/4
+ * @date 2021/8/6
  */
 @Slf4j
 public class NettyServer {
@@ -32,8 +32,9 @@ public class NettyServer {
                     .childHandler(new MyChannelInitializer());
 
             ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
-            log.info("netty server is stated...");
+            log.info("netty server is started...");
             channelFuture.channel().closeFuture().sync();
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
