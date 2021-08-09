@@ -18,6 +18,7 @@
         <module>pgsainia-08-netty-server-decoder-encoder</module>
         <module>pgsainia-09-netty-server-group</module>
         <module>pgsainia-10-netty-client</module>
+        <module>pgsainia-11-netty-client-decoder-encoder</module>
     </modules>
     <packaging>pom</packaging>
 
