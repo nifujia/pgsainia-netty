@@ -22,6 +22,7 @@
         <module>pgsainia-12-customize-decoder-encoder</module>
         <module>pgsainia-13-channel-out-message</module>
         <module>pgsainia-14-netty-udp</module>
+        <module>pgsainia-15-netty-http</module>
     </modules>
     <packaging>pom</packaging>
 
