@@ -23,6 +23,7 @@
         <module>pgsainia-13-channel-out-message</module>
         <module>pgsainia-14-netty-udp</module>
         <module>pgsainia-15-netty-http</module>
+        <module>pgsainia-20-netty-spring-boot</module>
     </modules>
     <packaging>pom</packaging>
 
