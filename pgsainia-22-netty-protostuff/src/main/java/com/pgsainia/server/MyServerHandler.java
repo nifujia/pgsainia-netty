@@ -1,7 +1,6 @@
 package com.pgsainia.server;
 
-import com.googlecode.protobuf.format.JsonFormat;
-import com.pgsainia.domain.MsgBody;
+import com.alibaba.fastjson.JSON;
 import com.pgsainia.util.MsgUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -18,16 +17,18 @@ import java.util.Date;
  */
 @Slf4j
 public class MyServerHandler extends ChannelInboundHandlerAdapter {
-
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         SocketChannel channel = (SocketChannel) ctx.channel();
-        log.info("开始报告连接信息...");
-        log.info("连接信息，有一个客户端建立连接了，host：{}，端口：{}", channel.remoteAddress().getHostString(), channel.remoteAddress().getPort());
-        log.info("连接报告结束...");
+        log.info("开始上报连接信息...");
+        log.info("连接信息，有一个客户端跟服务端建立连接了，连接 host ：{}， 端口：{}", channel.remoteAddress().getHostString(), channel.remoteAddress().getPort());
+        log.info("报告连接信息结束...");
+        String returnMessage = String.format("我是 netty server, 我已经接收到了你的连接信息，时间：%s，host：%s， 端口：%s",
+                new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),
+                channel.remoteAddress().getHostString(),
+                channel.remoteAddress().getPort());
 
-        String returnMessage = String.format("我已经接收到你的连接信息了，连接时间：%s", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-        ctx.writeAndFlush(MsgUtil.buildMsgBody(channel.id().toString(), returnMessage));
+        ctx.writeAndFlush(MsgUtil.buildMsgInfo(channel.id().toString(), returnMessage));
     }
 
     @Override
@@ -37,7 +38,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.info("接收到消息了，时间：{}，消息内容：{}", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), JsonFormat.printToString((MsgBody) msg));
+        log.info("netty server 接收到的信息为：{}", JSON.toJSONString(msg));
     }
 
     @Override

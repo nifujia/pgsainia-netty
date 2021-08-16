@@ -25,6 +25,7 @@
         <module>pgsainia-15-netty-http</module>
         <module>pgsainia-20-netty-spring-boot</module>
         <module>pgsainia-21-netty-protobuf</module>
+        <module>pgsainia-22-netty-protostuff</module>
     </modules>
     <packaging>pom</packaging>
 
