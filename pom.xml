@@ -26,6 +26,7 @@
         <module>pgsainia-20-netty-spring-boot</module>
         <module>pgsainia-21-netty-protobuf</module>
         <module>pgsainia-22-netty-protostuff</module>
+        <module>pgsainia-23-netty-sync</module>
     </modules>
     <packaging>pom</packaging>
 
