@@ -27,6 +27,7 @@
         <module>pgsainia-21-netty-protobuf</module>
         <module>pgsainia-22-netty-protostuff</module>
         <module>pgsainia-23-netty-sync</module>
+        <module>pgsainia-24-netty-heart</module>
     </modules>
     <packaging>pom</packaging>
 
