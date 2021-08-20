@@ -29,6 +29,7 @@
         <module>pgsainia-23-netty-sync</module>
         <module>pgsainia-24-netty-heart</module>
         <module>pgsainia-25-netty-protocol</module>
+        <module>pgsainia-26-netty-chunked</module>
     </modules>
     <packaging>pom</packaging>
 
